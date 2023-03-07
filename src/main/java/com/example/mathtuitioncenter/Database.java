@@ -3,6 +3,20 @@ package com.example.mathtuitioncenter;
 import java.sql.*;
 
 public class Database {
+    public Database(String url, String port, String db,
+                    String username, String passwd) {
+
+    }
+
+    public void connect() {
+
+
+    }
+
+    public void runQuery(String query) {
+
+    }
+
 
     public static void main(String args[]){
         try{
@@ -20,12 +34,4 @@ public class Database {
         }catch(Exception e){ System.out.println(e);}
     }
 
-
-    public static void main(String args[]) {
-        Database db = new Database("db4free.net", "3306",
-                                "nordin", "nrdinutp");
-        db.connect();
-        db.runQuery("select * from Student");
-
-    }
 }
