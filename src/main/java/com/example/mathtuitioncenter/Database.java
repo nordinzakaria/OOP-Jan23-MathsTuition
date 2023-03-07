@@ -9,13 +9,23 @@ public class Database {
             Class.forName("com.mysql.cj.jdbc.Driver");
 
             Connection con=DriverManager.getConnection(
-                    "jdbc:mysql://db4free.net:3306/oopjan23utp","nordin","n00Pdinutp");
+                    "jdbc:mysql://db4free.net:3306/oopjan23utp",
+                    "nordin","n00Pdinutp");
 //here sonoo is database name, root is username and password
             Statement stmt=con.createStatement();
-            ResultSet rs=stmt.executeQuery("select * from Student");
+            ResultSet rs = stmt.executeQuery("select * from Student");
             while(rs.next())
                 System.out.println(rs.getString(1));
             con.close();
         }catch(Exception e){ System.out.println(e);}
+    }
+
+
+    public static void main(String args[]) {
+        Database db = new Database("db4free.net", "3306",
+                                "nordin", "nrdinutp");
+        db.connect();
+        db.runQuery("select * from Student");
+
     }
 }
