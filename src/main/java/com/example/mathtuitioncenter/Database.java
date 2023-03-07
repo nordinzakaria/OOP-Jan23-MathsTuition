@@ -3,13 +3,30 @@ package com.example.mathtuitioncenter;
 import java.sql.*;
 
 public class Database {
+    private String url;
+    private String port;
+    private String db;
+    private String username;
+    private String passwd;
+
     public Database(String url, String port, String db,
                     String username, String passwd) {
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        }
+        catch(Exception e){ System.out.println(e);}
 
+        // assign attributes
     }
 
     public void connect() {
-
+                // change string to attribute
+        try {
+            Connection con = DriverManager.getConnection(
+                    "jdbc:mysql://db4free.net:3306/oopjan23utp",
+                    "nordin", "n00Pdinutp");
+        }
+        catch(Exception e){ System.out.println(e);}
 
     }
 
