@@ -18,11 +18,33 @@ public class Center {
     }
 
     public void addStudentBatch(StudentBatch sb) {
-        
+
     }
 
-    public static void main(String args[]) {
+    public void addTeacher(RegularTeacher rt) {
 
+
+    }
+
+    public void addTeacher(FreelanceTeacher rt) {
+
+
+    }
+
+    public void displayTeachers() {
+
+    }
+
+
+    public static void main(String args[]) {
+        Center ipohcenter = new Center();
+
+        RegularTeacher rteacher = new RegularTeacher();
+        FreelanceTeacher fteacher = new FreelanceTeacher();
+
+        ipohcenter.addTeacher(rteacher);
+        ipohcenter.addTeacher(fteacher);
+        ipohcenter.displayTeachers();
     }
 
 }

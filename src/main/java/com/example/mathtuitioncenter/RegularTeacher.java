@@ -1,12 +1,6 @@
 package com.example.mathtuitioncenter;
 
-public class RegularTeacher {
-    String name;
-    String ic;
-    String address;
-    int numyearexp;
-    String qualification;
-
+public class RegularTeacher extends Teacher {
     public float calcPay() {
         return 0;
     }
