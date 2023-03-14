@@ -1,8 +1,11 @@
 package com.example.mathtuitioncenter;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
 
-public class Database {
+public class DatabaseSingle {
     private String url;
     private String port;
     private String db;
@@ -10,12 +13,10 @@ public class Database {
     private String passwd;
     private Connection con;
 
-    private static String driver = "com.mysql.cj.jdbc.Driver";
-
-    public Database(String url, String port, String db,
+    public DatabaseSingle(String url, String port, String db,
                     String username, String passwd) {
         try {
-            Class.forName(Database.driver);
+            Class.forName("com.mysql.cj.jdbc.Driver");
         }
         catch(Exception e){ System.out.println(e);}
 
@@ -23,10 +24,10 @@ public class Database {
     }
 
     public void connect() {
-                // change string to attribute
+        // change string to attribute
         try {
             con = DriverManager.getConnection(
-                this.url + ":" +this.port+"/"+this.db,
+                    this.url + ":" +this.port+"/"+this.db,
                     this.username, this.passwd);
         }
         catch(Exception e){ System.out.println(e);}
@@ -50,5 +51,10 @@ public class Database {
         }
         catch(Exception e){ System.out.println(e);}
     }
+
+    public static void display() {
+        System.out.println("You are in DatabaseSingle class");
+    }
+
 
 }
