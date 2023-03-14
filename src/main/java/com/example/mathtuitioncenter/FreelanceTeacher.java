@@ -1,5 +1,6 @@
 package com.example.mathtuitioncenter;
 
+// inheritance
 public class FreelanceTeacher extends Teacher {
     private int hours;
 

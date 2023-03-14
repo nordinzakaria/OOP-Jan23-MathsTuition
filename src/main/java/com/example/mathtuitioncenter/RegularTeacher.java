@@ -1,5 +1,6 @@
 package com.example.mathtuitioncenter;
 
+// inheritance
 public class RegularTeacher extends Teacher {
     public float calcPay() {
         return 0;
