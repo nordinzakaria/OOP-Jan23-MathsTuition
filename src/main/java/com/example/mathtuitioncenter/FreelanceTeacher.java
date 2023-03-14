@@ -14,7 +14,7 @@ public class FreelanceTeacher extends Teacher {
     }
 
     public float calcPay() {
-        return 0;
+        return 100;
     }
 
     public  static void main(String args[]) {
