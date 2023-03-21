@@ -56,6 +56,10 @@ public abstract class Teacher extends Educator implements TaxPayer {
 
     public abstract float calcBonus();
 
+    public float calcTaxRate() {
+        return 0.12f;
+    }
+
     public static void main(String args[]) {
         // why the above is not good
         Teacher t = new RegularTeacher();
