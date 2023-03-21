@@ -8,6 +8,11 @@ public class RegularTeacher extends Teacher {
         return 200;
     }
 
+    public float calcBonus() {
+        return 200;
+    }
+
+
     public static void main(String args[]) {
         RegularTeacher rt = new RegularTeacher(); // parameter
         float pay = rt.calcPay();

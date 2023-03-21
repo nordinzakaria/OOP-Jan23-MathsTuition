@@ -16,6 +16,10 @@ public class FreelanceTeacher extends Teacher {
     public float calcPay() {
         return 100;
     }
+    public float calcBonus() {
+        return 200;
+    }
+
 
     public  static void main(String args[]) {
         FreelanceTeacher ft = new FreelanceTeacher();

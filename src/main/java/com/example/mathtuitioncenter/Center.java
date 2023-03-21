@@ -36,6 +36,13 @@ public class Center {
              */
             // declare calcPay inside the superclss
             sum += teacher.calcPay();
+
+            System.out.println("Bonus is "+ teacher.calcBonus());
+
+
+            System.out.println("Tax is "+ teacher.calcTaxRate());
+            // 1 solution: put calcTax in Teacher
+            //      issue: have to consider other Employees
         }
 
         return sum;
@@ -45,7 +52,7 @@ public class Center {
     public void displayTeachers() {
         for (int i=0; i<teachers.size(); i++) {
             Teacher teacher = teachers.get(i);
-            System.out.println(teacher.name);
+            //System.out.println(teacher.name);
         }
 
     }

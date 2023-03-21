@@ -1,7 +1,7 @@
 package com.example.mathtuitioncenter;
 
 // createed by team in Bangalore
-public class Teacher {
+public abstract class Teacher extends Educator implements TaxPayer {
     // data
     private String name;
     private String ic;
@@ -54,9 +54,11 @@ public class Teacher {
 
     public abstract float calcPay();
 
+    public abstract float calcBonus();
+
     public static void main(String args[]) {
         // why the above is not good
-        Teacher t = new Teacher();
+        Teacher t = new RegularTeacher();
         System.out.println(t.calcPay());
 
     }
