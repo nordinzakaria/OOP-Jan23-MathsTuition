@@ -25,6 +25,9 @@ public class LHDN {
         LHDN lhdn = new LHDN();
         lhdn.addTaxPayer(rt);
         lhdn.addTaxPayer(cleaner);
+
+        Student stud = new Student();
+        lhdn.addTaxPayer(stud);
     }
 
 
